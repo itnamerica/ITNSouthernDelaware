@@ -8,12 +8,12 @@
     <div class="jumbotron section news-content">
       
         <div class="pressroom col-sm-6 row">
-          <a href="http://pressroom.itnamerica.org/category/itnlanier/">
+          <a href="http://pressroom.itnamerica.org/category/itnsoutherndelaware/">
           <div class="col-sm-6 pressroom-image">
             <div class="pressroom-title"><h3>Pressroom</h3></div>
             <img ng-src="{{assetsPath}}/images/icons/news-noword2.png" alt="newspaper icon"/>
             <ul>
-              <li class="wow fadeInUp"><a href="http://pressroom.itnamerica.org/category/itnlanier/">Pressroom Blog</a></li>
+              <li class="wow fadeInUp"><a href="http://pressroom.itnamerica.org/category/itnsoutherndelaware/">Pressroom Blog</a></li>
             </ul>
           </div><!--pressroom-image-->
           </a>
@@ -24,10 +24,7 @@
           <div class="newsletter-title"><h3>Newsletters</h3></div>
           <img ng-src="{{assetsPath}}/images/icons/news-noword.png" alt="press icon"/>
           <ul>
-            <li class="wow fadeInUp"><a ui-sref="newsletters({anchor: 'march17'})">Newsletter March 2017</a></li>
-            <li class="wow fadeInUp" data-wow-delay=".1s"><a ui-sref="newsletters({anchor: 'newsletter-dec16'})">Newsletter December 2016</a></li>
-            <li class="wow fadeInUp" data-wow-delay=".2s"><a ui-sref="newsletters({anchor: 'july16'})">Newsletter July 2016</a></li>
-            <li class="wow fadeInUp" data-wow-delay=".3s"><a ui-sref="newsletters({anchor: 'newsletter-nov15'})">Newsletter November 2015</a></li>
+            <li class="wow fadeInUp"><a ng-click="redirectToURL(assetsPath + '/images/docs/newsletters/November_2015.pdf')">ITN<em>Express</em> Newsletter November 2015</a></li>
           </ul>
         </div><!--newsletter-content-->
         
