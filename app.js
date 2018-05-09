@@ -68,12 +68,6 @@ app.post('/sendmail', function(req, res){
         console.log('Message sent: %s', info.messageId);
         // transporter.close();
     });
-    
-    app.get('/*', function(req, res) { 
-      console.log('redirecting index');
-      // res.sendFile(__dirname + '/index.html')
-      res.sendFile(__dirname + '/app/contact.html')
-    });
 
   
   res.end();
