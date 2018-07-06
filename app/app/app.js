@@ -246,6 +246,7 @@ myApp.controller('MainController', ['$scope', '$transitions','$http', '$anchorSc
       vehicleDescription: {},
       changeOfStatus: {},
       drivingExperience: {},
+      references: {},
       firstReference: {},
       secondReference: {},
       thirdReference: {},
@@ -554,6 +555,7 @@ myApp.controller('MainController', ['$scope', '$transitions','$http', '$anchorSc
 };
 
 $scope.checkRequiredFields = function(formType){
+  console.log('form data is ', $scope.formData);
   var requiredFieldsArray;
   if (formType === 'volunteer'){
     requiredFieldsArray = {
