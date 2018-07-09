@@ -501,7 +501,7 @@ myApp.controller('MainController', ['$scope', '$transitions','$http', '$anchorSc
   
   $scope.deleteForm = function(formType, formObj){
     console.log('inside deleteform, form type', formType, 'form obj', formObj);
-    if (formType === 'memberapp' || formType === 'volunteerapp'){
+    if (formType !== 'other'){
       $(document).ready(function(){
         $('#deleteAppModal').modal('hide');
       })
@@ -960,6 +960,12 @@ myApp.filter('tableToFormName', function(){
     else if (tableName === 'contactform'){return 'Contact'}
     else {return 'Other'}
   }
+});
+
+myApp.filter('reverse', function() {
+  return function(items) {
+    return items.slice().reverse();
+  };
 });
 
 
