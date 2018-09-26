@@ -93,21 +93,6 @@ MongoClient.connect('mongodb://itnadmin:itnUser0136!@ds153700.mlab.com:53700/itn
 
 
 
-app.get('/getAllRides', function (req,res) {
-  
-  MongoClient.connect('mongodb://itnadmin:itnUser0136!@ds119442.mlab.com:19442/itnamerica-new', function(err, client) {
-    if (err) { 
-      console.log('db itnamerica not connecting, but inside mongo block:', err);
-    };
-    db = client.db('itnamerica-new');
-    db.collection('ridesdatamonthly').find().toArray(function (err, result) {
-      console.log('result is ', result);
-      res.send(result);
-    })
-  });
-  
-}); // end of /getRidesData get request
-
 
 
 
@@ -220,6 +205,23 @@ app.post('/sendmail', function(req, res){
     console.log('after mongo block');
     res.end();
   }); // end /sendmail post request
+  
+  
+
+  app.get('/getAllRides', function (req,res) {
+    
+    MongoClient.connect('mongodb://itnadmin:itnUser0136!@ds119442.mlab.com:19442/itnamerica-new', function(err, client) {
+      if (err) { 
+        console.log('db itnamerica not connecting, but inside mongo block:', err);
+      };
+      db = client.db('itnamerica-new');
+      db.collection('ridesdatamonthly').find().toArray(function (err, result) {
+        console.log('result is ', result);
+        res.send(result);
+      })
+    });
+    
+  }); // end of /getRidesData get request
 
 
 
